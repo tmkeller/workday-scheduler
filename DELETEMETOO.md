@@ -26,7 +26,7 @@ Modify the starter code provided by bootcamp staff to build an interactive, dyna
 
 [Live Site URL](https://tmkeller.github.io/password-generator/)
 
-![App Mockup](./assets/mockup.png)
+![App Mockup](./demo/demo.gif)
 
 ## Technologies
 

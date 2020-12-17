@@ -4,13 +4,28 @@ body {
   line-height: 1;
 }
 
-textarea{
+.no_padding {
+  padding: 0;
+}
+
+textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+}
+
+table {
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scheduler_table {
+  width: 100%;
+  max-width: 1000px;
 }
 
 .jumbotron {
@@ -21,13 +36,18 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
+  color: black;
 }
 
-.time-block{
-  text-align: center;
-  border-radius: 15px;
+th.time-block {
+  text-align: right;
+  border-top: 1px solid #bbbbbb;
+}
+
+th.custom_padding {
+  padding: 12px 3px;
 }
 
 .row {
@@ -36,25 +56,30 @@ textarea{
   border-top: 1px solid white;;
 }
 
+.no_margin {
+  margin: 0;
+}
+
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
+.past, .present, .future {
+  color: black;
+}
+
 .past {
   background-color: #d3d3d3;
-  color: white;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
 }
 
 .saveBtn {
