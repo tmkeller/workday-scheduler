@@ -4,19 +4,6 @@ body {
   line-height: 1;
 }
 
-.no_padding {
-  padding: 0;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-}
-
 table {
   min-width: 400px;
   margin-left: auto;
@@ -36,14 +23,13 @@ table {
   border-bottom: 10px solid black;
 }
 
-.description {
-  white-space: pre-wrap;
-  color: black;
+td.description, td.saveBtn {
+  border-top: 2px solid #89cff0;
+  border-style: outset;
 }
 
-th.time-block {
-  text-align: right;
-  border-top: 1px solid #bbbbbb;
+[contenteditable] {
+  outline: 0px solid transparent;
 }
 
 th.custom_padding {
@@ -52,18 +38,14 @@ th.custom_padding {
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
+  margin-top: 1px;
 }
 
-.no_margin {
-  margin: 0;
-}
-
-.hour {
+th.hour {
+  text-align: right;
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border-top: 2px solid #bbbbbb;
 }
 
 .past, .present, .future {
@@ -82,15 +64,26 @@ th.custom_padding {
   background-color: #77dd77;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
+td.saveBtn {
+  border-left: 0;
+  padding: 0px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
-  color: white;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
 
-.saveBtn i:hover {
+.saveBtn svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.saveBtn svg:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
