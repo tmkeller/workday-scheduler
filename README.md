@@ -1,105 +1,42 @@
 # Work Day Scheduler
+UW Bootcamp assignment: Work Day Scheduling app
 
-## Your Task
+## About the Author
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Timothy M. Keller is a web developer and musician residing in Seattle, WA.
 
-You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. However, you can still use it for this project, or you can look into one of the following alternatives:
+Email: timothy.m.keller@gmail.com
 
-  * [Luxon](https://moment.github.io/luxon/)
+Github: https://github.com/tmkeller
 
-  * [Day.js](https://day.js.org/)
+LinkedIn: https://linkedin.com/in/tim-keller-3ab55bb1/
 
-  * [date-fns](https://date-fns.org/)
+## Features
 
-  * [js-Joda](https://js-joda.github.io/js-joda/)
+An interactive daily scheduling app with the following features:
 
-Whichever library you choose, be sure to read the documentation carefully!
+* Persistent state through localStorage allows the app to maintain entries after reloading.
+* Attractive, navigable interface.
+* Uses bootstrap columns and containers to create an interface that functions and displays properly at any screen width.
+* Makes use of JQuery at every opportunity.
+* Uses CSS border-style combined with JQuery functions to create the illusion of buttons that depress like a real-world object!
+* JQuery hover function that allows svg icons to change color.
+* Table row that changes color depending on the time of the day, showing the user where they should be in their schedule.
 
+## Product
 
-## User Story
+[Live Site URL](https://tmkeller.github.io/workday-scheduler/)
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+![App Mockup](./demo/demo.gif)
 
+[Screenshot](./demo/screenshot.png)
 
-## Acceptance Criteria
+## Technologies
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+![javascript](https://img.shields.io/badge/javascript-14.3%25-yellow)
+![html](https://img.shields.io/badge/html-70.6%25-blue)
+![css](https://img.shields.io/badge/css-15.1%25-red)
 
+## License
 
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./demo/demo.gif)
-
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses the Moment.js library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)

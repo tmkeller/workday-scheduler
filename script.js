@@ -15,7 +15,7 @@ for ( var i = 9; i <= 17; i++ ) {
 // Iterate over all elements in textAreas to determine whether their current time is in the past, present, or future.
 textAreas.each( function( index ) {
     var hourIndex = $( textAreas[ index ] ).attr( "data-index" );
-
+// Tests whether the text area should receive the past, present, or future classes to color it appropriately.
     if ( hourIndex > currentHour ) {
         $( textAreas[ index ] ).addClass( "future" );
     } else if ( hourIndex < currentHour ) {
