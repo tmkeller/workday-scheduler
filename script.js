@@ -1,4 +1,3 @@
-var dayDate = moment().format('dddd, MMMM Do, YYYY');
 var currentHour = parseInt( moment().format( 'HH' ) );
 var hourHeaders = $( ".hour" );
 
@@ -13,11 +12,6 @@ for ( var i = 9; i <= 17; i++ ) {
 
 hourHeaders.each( function( index ) {
     var hourIndex = $( hourHeaders[ index ] ).attr( "data-index");
-    if ( hourIndex < 13 ) {
-        $( hourHeaders[ index ] ).text( `${ hourIndex }AM` );
-    } else {
-        $( hourHeaders[ index ] ).text( `${ hourIndex - 12 }PM` );
-    }
 
     if ( hourIndex > currentHour ) {
         $( hourHeaders[ index ] ).next().addClass( "future" );
@@ -29,11 +23,10 @@ hourHeaders.each( function( index ) {
 });
 
 $( ".saveBtn" ).click( function() {
-    var textField = $( this ).prev();
-    localStorage.setItem( textField.attr( "id" ), textField.text() );
+    localStorage.setItem( $( this ).prev().attr( "id" ), $( this ).prev().text() );
 })
 
-$( "#currentDay" ).text( dayDate );
+$( "#currentDay" ).text( moment().format('dddd, MMMM Do, YYYY') );
 
 $( ".saveBtn" ).hover( function( event ) {
     $( event.target ).children().first().attr( "fill", "black" );
