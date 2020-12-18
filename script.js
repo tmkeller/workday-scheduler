@@ -1,4 +1,29 @@
 var dayDate = moment().format('dddd, MMMM Do, YYYY');
+var currentHour = parseInt( moment().format( 'HH' ) );
+
+var hourHeaders = $( ".hour" );
+
+hourHeaders.each( function( index ) {
+    var hourIndex = $( hourHeaders[ index ] ).attr( "data-index");
+    if ( hourIndex < 13 ) {
+        $( hourHeaders[ index ] ).text( `${ hourIndex }AM` );
+    } else {
+        $( hourHeaders[ index ] ).text( `${ hourIndex - 12 }PM` );
+    }
+
+    if ( hourIndex > currentHour ) {
+        $( hourHeaders[ index ] ).next().addClass( "future" );
+    } else if ( hourIndex < currentHour ) {
+        $( hourHeaders[ index ] ).next().addClass( "past" );
+    } else {
+        $( hourHeaders[ index ] ).next().addClass( "present" );
+    }
+});
+
+$(".saveBtn").click(function () {
+    console.log( $( this ).prev().text() );
+})
+
 $( "#currentDay" ).text( dayDate );
 
 $( ".saveBtn" ).hover( function( event ) {
