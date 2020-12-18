@@ -1,7 +1,15 @@
 var dayDate = moment().format('dddd, MMMM Do, YYYY');
 var currentHour = parseInt( moment().format( 'HH' ) );
-
 var hourHeaders = $( ".hour" );
+
+// Retrieve any stored data.
+for ( var i = 9; i <= 17; i++ ) {
+    var sched = "hour-" + i;
+    var item;
+    if ( item = localStorage.getItem( sched ) ) {
+        $( `#${ sched }` ).text( item );
+    }
+}
 
 hourHeaders.each( function( index ) {
     var hourIndex = $( hourHeaders[ index ] ).attr( "data-index");
@@ -20,8 +28,9 @@ hourHeaders.each( function( index ) {
     }
 });
 
-$(".saveBtn").click(function () {
-    console.log( $( this ).prev().text() );
+$( ".saveBtn" ).click( function() {
+    var textField = $( this ).prev();
+    localStorage.setItem( textField.attr( "id" ), textField.text() );
 })
 
 $( "#currentDay" ).text( dayDate );
