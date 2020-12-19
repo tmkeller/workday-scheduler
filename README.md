@@ -27,9 +27,7 @@ An interactive daily scheduling app with the following features:
 
 [Live Site URL](https://tmkeller.github.io/workday-scheduler/)
 
-![App Mockup](./demo/demo.gif)
-
-[Screenshot](./demo/screenshot.png)
+![Screenshot](./demo/screenshot.png)
 
 ## Technologies
 
